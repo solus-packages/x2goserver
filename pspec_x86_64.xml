@@ -1,0 +1,95 @@
+<PISI>
+    <Source>
+        <Name>x2goserver</Name>
+        <Packager>
+            <Name>Shawn W Dunn</Name>
+            <Email>sfalken@cloverleaf-linux.org</Email>
+        </Packager>
+        <License>GPL-2.0</License>
+        <PartOf>network.util</PartOf>
+        <Summary xml:lang="en">x2go remote desktop server</Summary>
+        <Description xml:lang="en">X2Go is an open source remote desktop software for Linux that uses the NX technology protocol. X2Go gives remote access to the Linux graphical user interface. It can also be used to access PC desktops. It provides secure remote sessions via ssh.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>x2goserver</Name>
+        <Summary xml:lang="en">x2go remote desktop server</Summary>
+        <Description xml:lang="en">X2Go is an open source remote desktop software for Linux that uses the NX technology protocol. X2Go gives remote access to the Linux graphical user interface. It can also be used to access PC desktops. It provides secure remote sessions via ssh.
+</Description>
+        <PartOf>network.util</PartOf>
+        <Files>
+            <Path fileType="config">/etc/logcheck/ignore.d.server/x2goserver</Path>
+            <Path fileType="config">/etc/sudoers.d/x2goserver</Path>
+            <Path fileType="config">/etc/x2go/Xresources</Path>
+            <Path fileType="config">/etc/x2go/Xsession</Path>
+            <Path fileType="config">/etc/x2go/x2go_logout</Path>
+            <Path fileType="config">/etc/x2go/x2go_logout.d/010_userscripts.sh</Path>
+            <Path fileType="config">/etc/x2go/x2goagent.options</Path>
+            <Path fileType="config">/etc/x2go/x2goserver.conf</Path>
+            <Path fileType="config">/etc/x2go/x2gosql/passwords</Path>
+            <Path fileType="config">/etc/x2go/x2gosql/sql</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/x2go/extensions/fail-resume.d/.placeholder</Path>
+            <Path fileType="library">/usr/lib/x2go/extensions/fail-start.d/.placeholder</Path>
+            <Path fileType="library">/usr/lib/x2go/extensions/fail-suspend.d/.placeholder</Path>
+            <Path fileType="library">/usr/lib/x2go/extensions/fail-terminate.d/.placeholder</Path>
+            <Path fileType="library">/usr/lib/x2go/extensions/post-resume.d/.placeholder</Path>
+            <Path fileType="library">/usr/lib/x2go/extensions/post-start.d/.placeholder</Path>
+            <Path fileType="library">/usr/lib/x2go/extensions/post-suspend.d/.placeholder</Path>
+            <Path fileType="library">/usr/lib/x2go/extensions/post-terminate.d/.placeholder</Path>
+            <Path fileType="library">/usr/lib/x2go/extensions/pre-resume.d/.placeholder</Path>
+            <Path fileType="library">/usr/lib/x2go/extensions/pre-start.d/.placeholder</Path>
+            <Path fileType="library">/usr/lib/x2go/extensions/pre-suspend.d/.placeholder</Path>
+            <Path fileType="library">/usr/lib/x2go/extensions/pre-terminate.d/.placeholder</Path>
+            <Path fileType="library">/usr/lib/x2go/x2gochangestatus</Path>
+            <Path fileType="library">/usr/lib/x2go/x2gocreatesession</Path>
+            <Path fileType="library">/usr/lib/x2go/x2godbwrapper.pm</Path>
+            <Path fileType="library">/usr/lib/x2go/x2gogetagent</Path>
+            <Path fileType="library">/usr/lib/x2go/x2gogetagentstate</Path>
+            <Path fileType="library">/usr/lib/x2go/x2gogetdisplays</Path>
+            <Path fileType="library">/usr/lib/x2go/x2gogetports</Path>
+            <Path fileType="library">/usr/lib/x2go/x2gogetstatus</Path>
+            <Path fileType="library">/usr/lib/x2go/x2goinsertport</Path>
+            <Path fileType="library">/usr/lib/x2go/x2goinsertsession</Path>
+            <Path fileType="library">/usr/lib/x2go/x2golistsessions_sql</Path>
+            <Path fileType="library">/usr/lib/x2go/x2gologlevel</Path>
+            <Path fileType="library">/usr/lib/x2go/x2gologlevel.pm</Path>
+            <Path fileType="library">/usr/lib/x2go/x2goresume</Path>
+            <Path fileType="library">/usr/lib/x2go/x2gormforward</Path>
+            <Path fileType="library">/usr/lib/x2go/x2gormport</Path>
+            <Path fileType="library">/usr/lib/x2go/x2gosqlitewrapper</Path>
+            <Path fileType="library">/usr/lib/x2go/x2gosqlitewrapper.pl</Path>
+            <Path fileType="library">/usr/lib/x2go/x2gosuspend-agent</Path>
+            <Path fileType="library">/usr/lib/x2go/x2gosyslog</Path>
+            <Path fileType="library">/usr/lib/x2go/x2goutils.pm</Path>
+            <Path fileType="library">/usr/lib64/systemd/system/x2goserver.service</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="data">/usr/share/applications/x2gofm.desktop</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/mime/packages/sshfs-x2go.xml</Path>
+            <Path fileType="data">/usr/share/x2go/versions/VERSION.x2goserver</Path>
+            <Path fileType="data">/usr/share/x2go/versions/VERSION.x2goserver-compat</Path>
+            <Path fileType="data">/usr/share/x2go/versions/VERSION.x2goserver-extensions</Path>
+            <Path fileType="data">/usr/share/x2go/versions/VERSION.x2goserver-fmbindings</Path>
+            <Path fileType="data">/usr/share/x2go/versions/VERSION.x2goserver-printing</Path>
+            <Path fileType="data">/usr/share/x2go/versions/VERSION.x2goserver-pyhoca</Path>
+            <Path fileType="data">/usr/share/x2go/versions/VERSION.x2goserver-xsession</Path>
+            <Path fileType="data">/usr/share/x2go/x2gofeature.d/x2goserver-compat.features</Path>
+            <Path fileType="data">/usr/share/x2go/x2gofeature.d/x2goserver-extensions.features</Path>
+            <Path fileType="data">/usr/share/x2go/x2gofeature.d/x2goserver-fmbindings.features</Path>
+            <Path fileType="data">/usr/share/x2go/x2gofeature.d/x2goserver-printing.features</Path>
+            <Path fileType="data">/usr/share/x2go/x2gofeature.d/x2goserver-xsession.features</Path>
+            <Path fileType="data">/usr/share/x2go/x2gofeature.d/x2goserver.features</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2016-09-22</Date>
+            <Version>4.0.1.19</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Shawn W Dunn</Name>
+            <Email>sfalken@cloverleaf-linux.org</Email>
+        </Update>
+    </History>
+</PISI>
