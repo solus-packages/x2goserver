@@ -1,6 +1,6 @@
 name       : x2goserver
 version    : 4.0.1.19
-release    : 2
+release    : 3
 source     :
     - http://code.x2go.org/releases/source/x2goserver/x2goserver-4.0.1.19.tar.gz : 3dd5c1464a7992a38760fd6b08f5f8d37646f939f4f7834a7cd96bf4950623cc
 license    : GPL-2.0
@@ -14,4 +14,4 @@ build      : |
     %make LIBDIR=%libdir%
 install    : |
     %make_install LIBDIR=%libdir%
-    install -Dm 644 x2goserver.service $installdir/usr/lib64/systemd/system
+    install -Dm 644 x2goserver.service $installdir/usr/lib64/systemd/system/x2goserver.service
