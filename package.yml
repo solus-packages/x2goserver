@@ -1,17 +1,20 @@
 name       : x2goserver
-version    : 4.0.1.19
-release    : 3
+version    : 4.0.1.20
+release    : 4
 source     :
-    - http://code.x2go.org/releases/source/x2goserver/x2goserver-4.0.1.19.tar.gz : 3dd5c1464a7992a38760fd6b08f5f8d37646f939f4f7834a7cd96bf4950623cc
+    - https://code.x2go.org/releases/source/x2goserver/x2goserver-4.0.1.20.tar.gz : f8bf48e1c8995bd5a7cde6de1c006fdb77f2bae6c4b82e6b7b985a8f00a3dad9
 license    : GPL-2.0
 component  : network.util
 summary    : x2go remote desktop server
 description: |
     X2Go is an open source remote desktop software for Linux that uses the NX technology protocol. X2Go gives remote access to the Linux graphical user interface. It can also be used to access PC desktops. It provides secure remote sessions via ssh.
+rundeps    :
+    - perl-capture-tiny
+    - perl-config-simple
 setup      : |
     %apply_patches
 build      : |
-    %make LIBDIR=%libdir%
+    %make
 install    : |
-    %make_install LIBDIR=%libdir%
-    install -Dm 644 x2goserver.service $installdir/usr/lib64/systemd/system/x2goserver.service
+    %make_install
+    install -Dm 00644 x2goserver.service $installdir/usr/lib64/systemd/system/x2goserver.service
