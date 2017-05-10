@@ -67,6 +67,7 @@
             <Path fileType="library">/usr/lib/x2go/x2gosyslog</Path>
             <Path fileType="library">/usr/lib/x2go/x2goutils.pm</Path>
             <Path fileType="library">/usr/lib64/systemd/system/x2goserver.service</Path>
+            <Path fileType="library">/usr/lib64/sysusers.d/x2goserver.conf</Path>
             <Path fileType="executable">/usr/sbin</Path>
             <Path fileType="data">/usr/share/applications/x2gofm.desktop</Path>
             <Path fileType="man">/usr/share/man</Path>
@@ -87,8 +88,8 @@
         </Files>
     </Package>
     <History>
-        <Update release="4">
-            <Date>2017-05-03</Date>
+        <Update release="5">
+            <Date>2017-05-10</Date>
             <Version>4.0.1.20</Version>
             <Comment>Packaging update</Comment>
             <Name>Peter O&apos;Connor</Name>

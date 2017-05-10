@@ -1,0 +1,4 @@
+g x2gouser - -
+u x2gouser - - /var/lib/x2go
+g x2goprint - -
+u x2goprint - - /var/spool/x2go
