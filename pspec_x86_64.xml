@@ -89,8 +89,8 @@
         </Files>
     </Package>
     <History>
-        <Update release="6">
-            <Date>2017-05-10</Date>
+        <Update release="7">
+            <Date>2017-05-18</Date>
             <Version>4.0.1.20</Version>
             <Comment>Packaging update</Comment>
             <Name>Peter O&apos;Connor</Name>

@@ -1,6 +1,6 @@
 name       : x2goserver
 version    : 4.0.1.20
-release    : 6
+release    : 7
 source     :
     - https://code.x2go.org/releases/source/x2goserver/x2goserver-4.0.1.20.tar.gz : f8bf48e1c8995bd5a7cde6de1c006fdb77f2bae6c4b82e6b7b985a8f00a3dad9
 license    : GPL-2.0
@@ -12,19 +12,21 @@ description: |
 builddeps  :
     - x2goserver
 rundeps    :
+    - nx-libs
     - openssh-server
     - perl-capture-tiny
     - perl-config-simple
     - perl-dbd-sqlite
     - perl-file-basedir
+    - perl-file-which
     - pwgen
     - xwininfo
 setup      : |
     %apply_patches
 build      : |
-    %make
+    %make PREFIX=/usr
 install    : |
-    %make_install
-    install -Dm 00644 x2goserver.service $installdir/usr/lib64/systemd/system/x2goserver.service
-    install -Dm 00644 $pkgfiles/x2goserver.sysusers $installdir/usr/lib64/sysusers.d/x2goserver.conf
-    install -Dm 00644 $pkgfiles/x2goserver.tmpfiles $installdir/usr/lib64/tmpfiles.d/x2goserver.conf
+    %make_install PREFIX=/usr
+    install -D -m 00644 x2goserver.service $installdir/usr/lib64/systemd/system/x2goserver.service
+    install -D -m 00644 $pkgfiles/x2goserver.sysusers $installdir/usr/lib64/sysusers.d/x2goserver.conf
+    install -D -m 00644 $pkgfiles/x2goserver.tmpfiles $installdir/usr/lib64/tmpfiles.d/x2goserver.conf
